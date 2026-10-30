@@ -141,7 +141,7 @@ the required model weights have been provided or trained.
 Clone the repository:
 
 ```bash
-git clone https://github.com/your_username/tomato-disease-classification.git
+git clone https://github.com/Buraksefer/tomato-disease-classification.git
 cd tomato-disease-classification
 ```
 
