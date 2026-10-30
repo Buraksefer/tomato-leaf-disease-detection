@@ -1,0 +1,35 @@
+# Local credentials (only the blank example is public)
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+
+# Python environments and caches
+ai_torch_new/
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Datasets and trained weights are distributed separately
+/Data/
+/outputs/models/
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+/outputs/logs/
+
+# Local editor and OS files
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
+
+# Personal upload guide
+/GITHUB_YUKLEME.md

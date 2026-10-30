@@ -1,0 +1,21 @@
+MODEL KARŞILAŞTIRMA SONUCU
+Sampiyon model: swin
+Best Validation Accuracy: 99.9%
+Test Accuracy: 99.9%
+Macro F1: 99.9%
+Weighted F1: 99.9%
+
+OVERFITTING YORUMU (Genel Mantik):
+- Train loss sürekli düşerken val loss sürekli yükseliyorsa overfitting vardır.
+- Train ve val accuracy arasında çok büyük fark varsa overfitting riski yüksektir.
+- En dengeli eğriye sahip model genelleme açısından daha güvenilirdir.
+
+swin: final train acc = 99.87%, final val acc = 99.19%, fark = 0.68%
+vit: final train acc = 99.68%, final val acc = 98.98%, fark = 0.7%
+resnet: final train acc = 99.24%, final val acc = 97.66%, fark = 1.58%
+densenet: final train acc = 99.66%, final val acc = 97.76%, fark = 1.9%
+deeper_cnn: final train acc = 97.1%, final val acc = 98.58%, fark = -1.48%
+deit: final train acc = 99.81%, final val acc = 98.98%, fark = 0.83%
+mobilenet: final train acc = 98.37%, final val acc = 97.87%, fark = 0.5%
+improved_cnn: final train acc = 94.33%, final val acc = 95.43%, fark = -1.1%
+basic_cnn: final train acc = 46.92%, final val acc = 77.44%, fark = -30.52%
