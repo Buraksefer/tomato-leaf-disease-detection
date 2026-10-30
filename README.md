@@ -39,7 +39,7 @@ The dataset contains 10 classes:
 9. Tomato Mosaic Virus
 10. Healthy Tomato Leaf
 
-Dataset Structure:
+Expected local dataset structure (not included in this repository):
 
 ```text
 Data/
@@ -141,8 +141,8 @@ the required model weights have been provided or trained.
 Clone the repository:
 
 ```bash
-git clone https://github.com/Buraksefer/tomato-disease-classification.git
-cd tomato-disease-classification
+git clone https://github.com/Buraksefer/tomato-leaf-disease-detection.git
+cd tomato-leaf-disease-detection
 ```
 
 Install dependencies:
@@ -159,25 +159,54 @@ key; generated advice requires a valid key and network access.
 
 ## 📁 Project Structure
 
+The repository contains the source code and saved experiment outputs. Individual
+report and image files are summarized by their containing directories below.
+
 ```text
-Tomato_Disease_Project/
-│
-├── Data/
-├── outputs/
-│   ├── models/
-│   ├── results/
-│   └── confusion_matrices/
-│
-├── src/
-│   ├── train.py
-│   ├── evaluate.py
-│   ├── model_factory.py
-│   ├── app.py
-│   └── gradcam_utils.py
-│
+tomato-leaf-disease-detection/
+├── .env.example
+├── .gitignore
+├── README.md
 ├── requirements.txt
-└── README.md
+├── outputs/
+│   ├── comparison/          # Comparison charts, summary tables and winner report
+│   ├── confusion_matrices/  # NumPy confusion matrices and doya.py inspection script
+│   ├── gradcam/             # Saved Grad-CAM visualization
+│   ├── history/             # Per-model training history in JSON format
+│   └── results/             # JSON/TXT evaluation reports and summary_metrics.csv
+└── src/
+    ├── app.py              # Main Streamlit application with Gemini advice
+    ├── app1.py             # Alternative Streamlit interface
+    ├── compare_results.py  # Model comparison and visualization
+    ├── dataset.py          # Data loading and image transforms
+    ├── evaluate.py         # Model evaluation
+    ├── external_test_swin.py # External evaluation script (currently uses DenseNet)
+    ├── gemini_advice.py    # Optional Gemini API integration
+    ├── gradcam.py          # Grad-CAM script
+    ├── gradcam_utils.py    # Grad-CAM utilities used by the application
+    ├── model_factory.py    # Model selection and construction
+    ├── models/
+    │   ├── basic_cnn.py
+    │   ├── deeper_cnn.py
+    │   ├── deit_transfer.py
+    │   ├── densenet_transfer.py
+    │   ├── improved_cnn.py
+    │   ├── mobilenet_transfer.py
+    │   ├── resnet_transfer.py
+    │   ├── swin_transfer.py
+    │   └── vit_transfer.py
+    └── train.py            # Model training
 ```
+
+The following paths are local only and excluded by `.gitignore`:
+
+| Path | Purpose |
+| --- | --- |
+| `.env` | Private Gemini API key |
+| `Data/` | Training, validation, test and external datasets |
+| `outputs/models/` | Trained model weights (`.pth` files) |
+| `ai_torch_new/`, `.venv/` | Local Python environments |
+| `outputs/logs/` | Local execution logs |
 
 ---
 
